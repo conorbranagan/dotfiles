@@ -1,0 +1,27 @@
+[user]
+    name = Conor Branagan
+    email = conorbranagan@gmail.com
+
+[alias]
+    st = status -s
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    stashes = stash list
+    unstage = reset HEAD
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    tree = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+    f = "!git ls-files | grep -i"
+
+[core]
+    whitespace = trailing-space,space-before-tab,cr-at-eol
+
+[color]
+    ui = true
+    diff = true
+
+[push]
+    default = nothing
