@@ -28,4 +28,6 @@ then
 
     # path
     export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOBIN
+
+    alias supe='sudo supervisorctl'
 fi
