@@ -14,5 +14,6 @@
 --type-set=markdown=.md
 --type-set=conf=.conf
 --type-set=go=.go
+--type-set=jsx=.jsx
 
 --ignore-dir=build
