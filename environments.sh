@@ -4,7 +4,7 @@ then
 
     # go env
     export GOPATH=$VM/go
-    export GOROOT=/usr/local/opt/go
+    export GOROOT=/usr/local/opt/go/libexec
     export GOBIN=$GOROOT/bin
     export DDGO=$GOPATH/src/github.com/DataDog/dd-go
 
@@ -18,7 +18,7 @@ then
 
     # go env
     export GOPATH=$VM/go
-    export GOROOT=/usr/local/opt/go
+    export GOROOT=/usr/local/go
     export GOBIN=$GOROOT/bin
     export DDGO=$GOPATH/src/github.com/DataDog/dd-go
 
