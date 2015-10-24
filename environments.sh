@@ -1,3 +1,6 @@
+#
+# For on the host machine
+
 if [ -e ~/dev/datadog/vm ]
 then
     VM=~/dev/datadog/vm
@@ -10,7 +13,17 @@ then
 
     # path
     export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOBIN
+
+    # node
+    export NVM_DIR=~/.nvm
+    source `brew --prefix nvm`/nvm.sh
+
+    # ruby
+    eval "`rbenv init - zsh`"
 fi
+
+#
+# For inside the personal-chef vm
 
 if [ -e /home/vagrant/workspace ]
 then
