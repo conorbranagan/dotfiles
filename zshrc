@@ -22,6 +22,11 @@ setopt auto_name_dirs
 setopt no_prompt_cr
 unsetopt correct_all
 
+# powerline font config for linux
+if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+fi
+
 # Customize to your needs...
 . ~/.exports.sh
 . ~/.aliases.sh
