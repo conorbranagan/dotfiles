@@ -1,3 +1,5 @@
+export PATH=$PATH:/usr/local/bin
+
 #
 # For on the host machine
 
