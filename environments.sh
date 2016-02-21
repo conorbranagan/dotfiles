@@ -1,15 +1,18 @@
 export PATH=$PATH:/usr/local/bin
+platform=$(uname)
 
 #
-# For on the host machine
-
-if [ -e ~/dev/datadog/vm ]
-then
+# For the host machine
+if [ -e ~/dev/datadog/vm ]; then
     VM=~/dev/datadog/vm
 
     # go env
     export GOPATH=$VM/go
-    export GOROOT=/usr/local/opt/go/libexec
+    if [[ "$platform" == "Darwin" ]]; then
+        export GOROOT=/usr/local/opt/go/libexec
+    else
+        export GOROOT=/usr/local/go
+    fi
     export GOBIN=$GOROOT/bin
     export DDGO=$GOPATH/src/github.com/DataDog/dd-go
 
@@ -18,15 +21,20 @@ then
 
     # node
     export NVM_DIR=~/.nvm
-    source `brew --prefix nvm`/nvm.sh
+    if [[ "$platform" == "Darwin" ]]; then
+        source `brew --prefix nvm`/nvm.sh
+    else
+        source $NVM_DIR/nvm.sh
+    fi
     [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
     # ruby
-    eval "`rbenv init - zsh`"
+    export PATH=$HOME/.rbenv/bin:$PATH
+    eval "`~/.rbenv/bin/rbenv init - zsh`"
 fi
 
 #
-# For inside the personal-chef vm
+# For the personal-chef vm
 
 if [ -e /home/vagrant/workspace ]
 then
