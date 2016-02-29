@@ -18,6 +18,9 @@ if [ -e ~/dev/datadog/vm ]; then
 
     # path
     export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOBIN
+    if [[ "$platform" == "Darwin" ]]; then
+        export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    fi
 
     # node
     export NVM_DIR=~/.nvm
@@ -30,7 +33,7 @@ if [ -e ~/dev/datadog/vm ]; then
 
     # ruby
     export PATH=$HOME/.rbenv/bin:$PATH
-    eval "`~/.rbenv/bin/rbenv init - zsh`"
+    eval "`rbenv init - zsh`"
 fi
 
 #
