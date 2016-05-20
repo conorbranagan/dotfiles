@@ -51,7 +51,7 @@ then
 
     # python
     export DOGWEB_DEFAULT_CONFIG_PATH=$VM/dogweb/development.ini
-    source ~/dogweb/python/bin/activate
+    source ~/python/bin/activate
 
     # path
     export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOROOT/bin:$GOBIN
