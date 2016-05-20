@@ -12,4 +12,4 @@ alias_if_exists () {
 
 # Ubuntu aliases.
 alias_if_exists "ack-grep" "ack"
-alias ddev="cd ~/dev/datadog/personal-chef && vagrant ssh"
+alias ddev="cd ~/dev/datadog && vagrant ssh"

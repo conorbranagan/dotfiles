@@ -3,8 +3,8 @@ platform=$(uname)
 
 #
 # For the host machine
-if [ -e ~/dev/datadog/vm ]; then
-    VM=~/dev/datadog/vm
+if [ -e ~/dev/datadog/ ]; then
+    VM=~/dev/datadog/
 
     # go env
     export GOPATH=$VM/go
@@ -13,11 +13,11 @@ if [ -e ~/dev/datadog/vm ]; then
     else
         export GOROOT=/usr/local/go
     fi
-    export GOBIN=$GOROOT/bin
+    export GOBIN=$GOPATH/bin
     export DDGO=$GOPATH/src/github.com/DataDog/dd-go
 
     # path
-    export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOBIN
+    export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOROOT/bin:$GOBIN
     if [[ "$platform" == "Darwin" ]]; then
         export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
     fi
@@ -39,14 +39,14 @@ fi
 #
 # For the personal-chef vm
 
-if [ -e /home/vagrant/workspace ]
+if [ -e ~/dogweb ]
 then
-    VM=/home/vagrant/workspace
+    VM=~
 
     # go env
     export GOPATH=$VM/go
     export GOROOT=/usr/local/go
-    export GOBIN=$GOROOT/bin
+    export GOBIN=$GOPATH/bin
     export DDGO=$GOPATH/src/github.com/DataDog/dd-go
 
     # python
@@ -54,7 +54,6 @@ then
     source ~/dogweb/python/bin/activate
 
     # path
-    export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOBIN
-
+    export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOROOT/bin:$GOBIN
     alias supe='sudo supervisorctl'
 fi
