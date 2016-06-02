@@ -1,5 +1,13 @@
+if [ -e ~/dev/datadog/ ]; then
+    # Host machine
+    CONFIG_ROOT="$HOME"
+else
+    # DD devenv
+    CONFIG_ROOT="$HOME/.user-config"
+fi
+
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$CONFIG_ROOT/.oh-my-zsh
 
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -28,7 +36,7 @@ if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline
 fi
 
 # Customize to your needs...
-. ~/.exports.sh
-. ~/.aliases.sh
-. ~/.functions.sh
-. ~/.environments.sh
+. $CONFIG_ROOT/.exports.sh
+. $CONFIG_ROOT/.aliases.sh
+. $CONFIG_ROOT/.functions.sh
+. $CONFIG_ROOT/.environments.sh

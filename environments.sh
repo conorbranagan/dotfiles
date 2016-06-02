@@ -6,6 +6,10 @@ platform=$(uname)
 if [ -e ~/dev/datadog/ ]; then
     VM=~/dev/datadog/
 
+    # newer bash
+    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    export PATH="/usr/local/bin:$PATH"
+
     # go env
     export GOPATH=$VM/go
     if [[ "$platform" == "Darwin" ]]; then
