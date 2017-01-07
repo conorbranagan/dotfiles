@@ -7,6 +7,7 @@ $HOME/dev/datadog/personal-config"
 
 for CONFIG_ROOT in $CONFIG_LOCATIONS
 do
+    mkdir -p $CONFIG_ROOT
     echo "Deploying config files to $CONFIG_ROOT"
     # Deploy each app config file.
     for f in `ls . `
