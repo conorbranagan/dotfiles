@@ -61,3 +61,7 @@ then
     export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOROOT/bin:$GOBIN
     alias supe='sudo supervisorctl'
 fi
+
+export DATADOG_ROOT="$VM"
+export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
+

@@ -19,14 +19,17 @@ lalt + shift - up      :   kwmc window -s north
 lalt - 1 : kwmc space -fExperimental 1
 lalt - 2 : kwmc space -fExperimental 2 
 lalt - 3 : kwmc space -fExperimental 3
+lalt - 4 : kwmc space -fExperimental 4
+lalt - 5 : kwmc space -fExperimental 5
 
 lalt + shift - 1 : kwmc window -m space 1
 lalt + shift - 2 : kwmc window -m space 2
 lalt + shift - 3 : kwmc window -m space 3
 lalt + shift - 4 : kwmc window -m space 4
+lalt + shift - 4 : kwmc window -m space 5
 
 # fullscreen active window
-lalt - f          :   kwmc window -z fullscreen
+lalt + shift - f  :   kwmc window -z fullscreen
 
 # switcher mode
 lalt + shift - r  :   khd -e "reload" # reload config
