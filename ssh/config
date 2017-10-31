@@ -1,9 +1,19 @@
 Host staging
-  HostName jumpbox.datad0g.com
   User conor
+  Hostname jumpbox.datad0g.com
   ForwardAgent yes
+  ControlPath ~/.ssh/controlmasters/%r@%h:%p
+  ControlMaster auto
+  ControlPersist 10m
+  UseKeychain yes
+  AddKeysToAgent yes
 
 Host prod
-  HostName jumpbox.datadoghq.com
   User conor
+  Hostname jumpbox.datadoghq.com
   ForwardAgent yes
+  ControlPath ~/.ssh/controlmasters/%r@%h:%p
+  ControlMaster auto
+  ControlPersist 10m
+  UseKeychain yes
+  AddKeysToAgent yes

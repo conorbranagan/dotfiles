@@ -9,9 +9,9 @@ else
 fi
 
 # Setup ZSH
-if [[ $(sudo dpkg -l | grep -c zsh) -eq 0 ]]; then
-  sudo apt-get install -y -q zsh > /dev/null 2>&1
-fi
+#if [[ $(sudo dpkg -l | grep -c zsh) -eq 0 ]]; then
+#  sudo apt-get install -y -q zsh > /dev/null 2>&1
+#fi
 
 # First install oh-my-zsh
 if [ ! -f $CONFIG_ROOT/.oh-my-zsh/oh-my-zsh.sh ]; then
