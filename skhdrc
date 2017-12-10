@@ -35,15 +35,8 @@ cmd - return : open -na /Applications/Kitty.app
 
 # close focused window
 alt - w : chunkc tiling::window --close
-
-# focus window
-alt - left  : chunkc tiling::window --focus west
-alt - right : chunkc tiling::window --focus south
-alt - down  : chunkc tiling::window --focus north
-alt - up    : chunkc tiling::window --focus east
-
-alt - j : chunkc tiling::window --focus prev
-alt - k : chunkc tiling::window --focus next
+alt - left : chunkc tiling::window --focus prev
+alt - right : chunkc tiling::window --focus next
 
 # equalize size of windows
 shift + alt - 0 : chunkc tiling::desktop --equalize
