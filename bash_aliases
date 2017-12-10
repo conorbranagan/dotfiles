@@ -14,11 +14,11 @@ fi
 #fi
 
 # First install oh-my-zsh
-if [ ! -f $CONFIG_ROOT/.oh-my-zsh/oh-my-zsh.sh ]; then
-    echo "Cloning oh-myzsh"
-    git clone https://github.com/robbyrussell/oh-my-zsh.git $CONFIG_ROOT/.oh-my-zsh
-    #ln -s $CONFIG_ROOT/.oh-my-zsh/ $CONFIG_ROOT/oh-my-zsh-config/themes
-fi
+#if [ ! -f $CONFIG_ROOT/.oh-my-zsh/oh-my-zsh.sh ]; then
+#    echo "Cloning oh-myzsh"
+#    git clone https://github.com/robbyrussell/oh-my-zsh.git $CONFIG_ROOT/.oh-my-zsh
+#    #ln -s $CONFIG_ROOT/.oh-my-zsh/ $CONFIG_ROOT/oh-my-zsh-config/themes
+#fi
 
 . $CONFIG_ROOT/.exports.sh
 . $CONFIG_ROOT/.aliases.sh
