@@ -4,7 +4,7 @@ platform=$(uname)
 #
 # For the host machine
 if [ -e ~/dev/datadog/ ]; then
-    VM=~/dev/datadog/
+    VM=~/dev/datadog
 
     # newer bash
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
