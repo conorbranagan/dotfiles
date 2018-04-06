@@ -4,14 +4,15 @@ platform=$(uname)
 #
 # For the host machine
 if [ -e ~/dev/datadog/ ]; then
-    VM=~/dev/datadog
+    VM=~/dev/datadog/go/src/github.com/Datadog
+    DATADOG_ROOT=$VM
 
     # newer bash
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
     export PATH="/usr/local/bin:$PATH"
 
     # go env
-    export GOPATH=$VM/go
+    export GOPATH=~/dev/datadog/go
     if [[ "$platform" == "Darwin" ]]; then
         export GOROOT=/usr/local/opt/go/libexec
     else
@@ -38,6 +39,9 @@ if [ -e ~/dev/datadog/ ]; then
     # ruby
     export PATH=$HOME/.rbenv/bin:$PATH
     eval "`rbenv init - zsh`"
+
+    # aws
+    export PATH=$HOME/Library/Python/3.6/bin:$PATH
 fi
 
 #
@@ -46,9 +50,10 @@ fi
 if [ -e ~/dogweb ]
 then
     VM=~
+    DATADOG_ROOT=$VM
 
     # go env
-    export GOPATH=$VM/go
+    export GOPATH=~/go
     export GOROOT=/usr/local/go
     export GOBIN=$GOPATH/bin
     export DDGO=$GOPATH/src/github.com/DataDog/dd-go
