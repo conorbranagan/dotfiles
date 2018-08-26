@@ -10,6 +10,8 @@ dotfiles
     ```
     brew install rbenv nvm
     ```
+    
+1. [Install gimme](https://github.com/travis-ci/gimme#installation--usage)
 
 1. Set up the dotfiles
 
