@@ -5,14 +5,12 @@ dotfiles
 
 1. [Install Oh-My-ZSH](https://github.com/robbyrussell/oh-my-zsh)
 
-1. Install rbenv and nvm
+1. Install rbenv, nvm and gimme
 
     ```
-    brew install rbenv nvm
+    brew install rbenv nvm gimme
     ```
-    
-1. [Install gimme](https://github.com/travis-ci/gimme#installation--usage)
-
+   
 1. Set up the dotfiles
 
     ```
