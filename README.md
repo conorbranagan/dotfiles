@@ -10,6 +10,8 @@ dotfiles
     ```
     brew install rbenv nvm gimme
     ```
+    
+1. Install the powerline fonts for ZSH
    
 1. Set up the dotfiles
 
