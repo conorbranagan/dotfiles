@@ -1,9 +1,6 @@
 export PATH=$PATH:/usr/local/bin
 platform=$(uname)
 
-# Set go environment
-eval $(gimme 1.17.6) 2> /dev/null
-
 #
 # For the host machine
 if [ -e /Users/conor.branagan/go ]; then
@@ -75,3 +72,5 @@ export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
 
 # Rust
 export PATH="$PATH:$HOME/.cargo/bin"
+# Set go environment
+eval $(gimme 1.17.6) 2> /dev/null
