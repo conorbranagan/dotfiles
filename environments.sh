@@ -1,9 +1,6 @@
 export PATH=$PATH:/usr/local/bin
 platform=$(uname)
 
-# Set go environment
-eval $(gimme 1.17.6) 2> /dev/null
-
 #
 # For the host machine
 if [ -e /Users/conor.branagan/go ]; then
@@ -73,3 +70,5 @@ fi
 export DATADOG_ROOT="$VM"
 export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
 
+# Set go environment
+eval $(gimme 1.17.6) 2> /dev/null
