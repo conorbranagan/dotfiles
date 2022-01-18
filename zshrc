@@ -40,6 +40,3 @@ fi
 . $CONFIG_ROOT/.aliases.sh
 . $CONFIG_ROOT/.functions.sh
 . $CONFIG_ROOT/.environments.sh
-
-# Set go environment
-eval $(gimme 1.9.1) 2> /dev/null
