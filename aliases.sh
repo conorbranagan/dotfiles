@@ -1,6 +1,7 @@
 # Readable disk size.
 alias du="du -h"
 alias df="df -h"
+alias k="kubectl"
 
 alias_if_exists () {
     which $1 &> /dev/null

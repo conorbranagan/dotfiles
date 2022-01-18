@@ -1,10 +1,13 @@
 export PATH=$PATH:/usr/local/bin
 platform=$(uname)
 
+# Set go environment
+eval $(gimme 1.17.6) 2> /dev/null
+
 #
 # For the host machine
-if [ -e ~/dev/datadog/ ]; then
-    VM=~/dev/datadog/go/src/github.com/Datadog
+if [ -e /Users/conor.branagan/go ]; then
+    VM=/Users/conor.branagan/go/src/github.com/DataDog
     DATADOG_ROOT=$VM
 
     # newer bash
