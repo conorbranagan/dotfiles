@@ -6,40 +6,21 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " install the plugins
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
-Bundle 'bling/vim-bufferline'
-Bundle 'jlanzarotta/bufexplorer'
-Bundle 'fatih/vim-go'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'mhinz/vim-startify'
-Bundle 'mileszs/ack.vim'
-Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-Bundle 'vim-scripts/SearchComplete'
-Bundle 'cstrahan/vim-capnp'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'fatih/vim-go'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-markdown'
 
-" configure startify
-let g:startify_skiplist = [
-       \ '.*\.so',
-       \ '.*\.rdb',
-       \ '.*/\.git/*'
-       \ ]
-
-" Don't try to autoinstall go by default
-let g:go_disable_autoinstall = 1
-let g:go_auto_type_info = 0
-
-" Run vimfiler.
-let g:vimfiler_as_default_explorer = 1
-
-filetype plugin indent on
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 "=============
 " Behaviour
@@ -84,10 +65,6 @@ nnoremap k gk
 
 map - :Explore<cr>
 set pastetoggle=<F2>
-
-" Ack integration. Uncomment on ubuntu.
-" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-"
 
 "================
 " View

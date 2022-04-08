@@ -19,7 +19,7 @@ if [ -e /Users/conor.branagan/go ]; then
         export GOROOT=/usr/local/go
     fi
     export GOBIN=$GOPATH/bin
-    export DDGO=$GOPATH/dd-go
+    export DDGO=~/dd/dd-go
 
     # path
     export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOROOT/bin:$GOBIN
