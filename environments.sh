@@ -13,11 +13,11 @@ if [ -e /Users/conor.branagan/go ]; then
 
     # go env
     export GOPATH=/Users/conor.branagan/dd
-    if [[ "$platform" == "Darwin" ]]; then
-        export GOROOT=/usr/local/opt/go/libexec
-    else
-        export GOROOT=/usr/local/go
-    fi
+    #if [[ "$platform" == "Darwin" ]]; then
+    #    export GOROOT=/usr/local/opt/go/libexec
+    #else
+    #    export GOROOT=/usr/local/go
+    #fi
     export GOBIN=$GOPATH/bin
     export DDGO=~/dd/dd-go
 
@@ -69,6 +69,12 @@ fi
 
 export DATADOG_ROOT="$VM"
 export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
+export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
+
 
 # Set go environment
+<<<<<<< HEAD
 eval $(gimme 1.17.6) 2> /dev/null
+=======
+eval $(gimme 1.17.5) 2> /dev/null
+>>>>>>> 36e7b6e (committing fixes)
