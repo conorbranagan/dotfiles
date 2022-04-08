@@ -3,7 +3,7 @@
 set -e
 
 CONFIG_LOCATIONS="$HOME
-$HOME/dev/datadog/personal-config"
+$HOME/dd/personal-config"
 
 for CONFIG_ROOT in $CONFIG_LOCATIONS
 do

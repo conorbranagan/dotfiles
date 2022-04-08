@@ -1,4 +1,4 @@
-if [ -e ~/dev/datadog/ ]; then
+if [ -e ~/dd ]; then
     # Host machine
     CONFIG_ROOT="$HOME"
 else
