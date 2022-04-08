@@ -2,16 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AppleAntiAliasingThreshold</key>
-	<integer>1</integer>
-	<key>ApplePressAndHoldEnabled</key>
-	<false/>
-	<key>AppleScrollAnimationEnabled</key>
-	<integer>0</integer>
-	<key>AppleSmoothFixedFontsSizeThreshold</key>
-	<integer>1</integer>
-	<key>AppleWindowTabbingMode</key>
-	<string>manual</string>
 	<key>Default Bookmark Guid</key>
 	<string>EB943145-EBF8-4A1C-AB2D-CBB33CD0C38D</string>
 	<key>GlobalKeyMap</key>
@@ -27,6 +17,17 @@
 		<dict>
 			<key>Action</key>
 			<integer>28</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string>EB943145-EBF8-4A1C-AB2D-CBB33CD0C38D</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<key>0x56-0xa0000-0x9</key>
+		<dict>
+			<key>Action</key>
+			<integer>29</integer>
 			<key>Label</key>
 			<string></string>
 			<key>Text</key>
