@@ -12,14 +12,14 @@ if [ -e /Users/conor.branagan/go ]; then
     export PATH="/usr/local/bin:$PATH"
 
     # go env
-    export GOPATH=~/dev/datadog/go
+    export GOPATH=/Users/conor.branagan/dd
     if [[ "$platform" == "Darwin" ]]; then
         export GOROOT=/usr/local/opt/go/libexec
     else
         export GOROOT=/usr/local/go
     fi
     export GOBIN=$GOPATH/bin
-    export DDGO=$GOPATH/src/github.com/DataDog/dd-go
+    export DDGO=$GOPATH/dd-go
 
     # path
     export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOROOT/bin:$GOBIN
