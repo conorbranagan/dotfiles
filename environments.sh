@@ -12,7 +12,7 @@ if [ -e /Users/conor.branagan/go ]; then
     export PATH="/usr/local/bin:$PATH"
 
     # go env
-    export GOPATH=/Users/conor.branagan/dd
+    export GOPATH=/Users/conor.branagan/go
     #if [[ "$platform" == "Darwin" ]]; then
     #    export GOROOT=/usr/local/opt/go/libexec
     #else
@@ -75,8 +75,4 @@ export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 # Rust
 export PATH="$PATH:$HOME/.cargo/bin"
 # Set go environment
-<<<<<<< HEAD
 eval $(gimme 1.17.6) 2> /dev/null
-=======
-eval $(gimme 1.17.5) 2> /dev/null
->>>>>>> 36e7b6e (committing fixes)
