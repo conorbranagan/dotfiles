@@ -73,4 +73,4 @@ export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
 
 # Set go environment
-eval $(gimme 1.17.6) 2> /dev/null
+eval $(gimme 1.17.7) 2> /dev/null
