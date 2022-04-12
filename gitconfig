@@ -23,5 +23,8 @@
     ui = true
     diff = true
 
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
 [push]
     default = nothing
