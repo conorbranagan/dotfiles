@@ -70,3 +70,5 @@ fi
 export DATADOG_ROOT="$VM"
 export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
 
+# Rust
+export PATH="$PATH:$HOME/.cargo/bin"
