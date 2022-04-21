@@ -1,6 +1,7 @@
 # Readable disk size.
 alias du="du -h"
 alias df="df -h"
+alias k="kubectl"
 
 alias_if_exists () {
     which $1 &> /dev/null
@@ -12,4 +13,6 @@ alias_if_exists () {
 
 # Ubuntu aliases.
 alias_if_exists "ack-grep" "ack"
-alias ddev="cd ~/dev/datadog && vagrant ssh"
+alias ddev="cd ~/dd && vagrant ssh"
+
+alias fix_vm='sudo rm /etc/exports && sudo touch /etc/exports && vagrant reload && ssh-add -K && vagrant ssh'

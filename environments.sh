@@ -3,8 +3,8 @@ platform=$(uname)
 
 #
 # For the host machine
-if [ -e ~/dev/datadog/ ]; then
-    VM=~/dev/datadog/go/src/github.com/Datadog
+if [ -e /Users/conor.branagan/go ]; then
+    VM=/Users/conor.branagan/go/src/github.com/DataDog
     DATADOG_ROOT=$VM
 
     # newer bash
@@ -12,14 +12,14 @@ if [ -e ~/dev/datadog/ ]; then
     export PATH="/usr/local/bin:$PATH"
 
     # go env
-    export GOPATH=~/dev/datadog/go
-    if [[ "$platform" == "Darwin" ]]; then
-        export GOROOT=/usr/local/opt/go/libexec
-    else
-        export GOROOT=/usr/local/go
-    fi
+    export GOPATH=/Users/conor.branagan/go
+    #if [[ "$platform" == "Darwin" ]]; then
+    #    export GOROOT=/usr/local/opt/go/libexec
+    #else
+    #    export GOROOT=/usr/local/go
+    #fi
     export GOBIN=$GOPATH/bin
-    export DDGO=$GOPATH/src/github.com/DataDog/dd-go
+    export DDGO=~/dd/dd-go
 
     # path
     export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOROOT/bin:$GOBIN
@@ -69,6 +69,10 @@ fi
 
 export DATADOG_ROOT="$VM"
 export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
+export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
+
 
 # Rust
 export PATH="$PATH:$HOME/.cargo/bin"
+# Set go environment
+eval $(gimme 1.17.7) 2> /dev/null

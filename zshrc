@@ -1,4 +1,4 @@
-if [ -e ~/dev/datadog/ ]; then
+if [ -e ~/dd ]; then
     # Host machine
     CONFIG_ROOT="$HOME"
 else
@@ -20,7 +20,7 @@ export ZSH_THEME="agnoster"
 export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git gitfast redis-cli ruby osx supervisor python gem pip extract rvm wd)
+plugins=(git gitfast redis-cli ruby macos supervisor python gem pip extract rvm wd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,6 +40,3 @@ fi
 . $CONFIG_ROOT/.aliases.sh
 . $CONFIG_ROOT/.functions.sh
 . $CONFIG_ROOT/.environments.sh
-
-# Set go environment
-eval $(gimme 1.9.1) 2> /dev/null
