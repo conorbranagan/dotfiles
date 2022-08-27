@@ -9,79 +9,14 @@ Host *
   ServerAliveInterval 30
   HostKeyAlgorithms -ssh-rsa
 
-# output of `vagrant ssh-config`, this is much faster than `vagrant ssh`
-Host vagrant
-  HostName 127.0.0.1
-  User vagrant
-  Port 2222
+Host freenas
+  HostName 192.168.1.160
+  User conor
+  Port 22
   UserKnownHostsFile /dev/null
   StrictHostKeyChecking no
   PasswordAuthentication no
-  IdentityFile "~/dd/.vagrant/machines/default/virtualbox/private_key"
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
   HostKeyAlgorithms -ssh-rsa
-
-# Datadog Stuff
-Host dd.*
-  User conor
-  # IdentitiesOnly yes  <- incompatible with `ddtool ssh-keygen`
-  IdentityFile "~/.ssh/id_rsa"
-  ForwardAgent yes
-  UseKeychain yes
-  AddKeysToAgent yes
-  HostKeyAlgorithms -ssh-rsa
-
-Host dd.prd
-  Hostname jumpbox.datadoghq.com
-
-Host dd.stg
-  Hostname jumpbox.datad0g.com
-
-
-Host dd.stg.*
-  ProxyCommand ssh -q -A dd.stg -W `echo %h | cut -d. -f3-`.datadog.service.consul:%p
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host dd.prd.*
-  ProxyCommand ssh -q -A dd.prd -W `echo %h | cut -d. -f3-`.datadog.service.consul:%p
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host dd.s.i*
-    ProxyCommand ssh -q -A dd.stg -W `echo %h | cut -d. -f3-`.node.consul:%p
-
-Host dd.p.i*
-    ProxyCommand ssh -q -A dd.prd -W `echo %h | cut -d. -f3-`.node.consul:%p
-
-Host dd.s.ip-*
-  ProxyCommand ssh -q -A dd.stg -W `echo %h | cut -d- -f2-`:%p
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host dd.p.ip-*
-  ProxyCommand ssh -q -A dd.prd -W `echo %h | cut -d- -f2-`:%p
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host dd.shf
-  ProxyCommand ssh -q -A dd.stg -W horseface.datadog.service.consul:%p
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host dd.phf
-  ProxyCommand ssh -q -A dd.prd -W horseface.datadog.service.consul:%p
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host dd.ssa
-  ProxyCommand ssh -q -A dd.stg -W support-admin.datadog.service.consul:%p
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
-
-Host dd.psa
-  ProxyCommand ssh -q -A dd.prd -W support-admin.datadog.service.consul:%p
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
