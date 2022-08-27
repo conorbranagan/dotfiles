@@ -2,8 +2,7 @@
 
 set -e
 
-CONFIG_LOCATIONS="$HOME
-$HOME/dd/personal-config"
+CONFIG_LOCATIONS="$HOME"
 
 for CONFIG_ROOT in $CONFIG_LOCATIONS
 do
