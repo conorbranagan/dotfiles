@@ -5,14 +5,29 @@ dotfiles
 
 1. [Install Oh-My-ZSH](https://github.com/robbyrussell/oh-my-zsh)
 
+1. [Install Vundle](https://github.com/VundleVim/Vundle.vim)
+
 1. Install rbenv, nvm and gimme
+
+    On Mac:
 
     ```
     brew install rbenv nvm gimme
     ```
     
-1. Install the powerline fonts for ZSH
-   
+    On Arch:
+
+    ```
+    mkdir -p ~/aur
+    cd ~/aur && git clone https://aur.archlinux.org/gimme.git && cd gimme && makepkg -si
+    cd ~/aur && git clone https://aur.archlinux.org/rbenv.git && cd rbenv &&
+    makepkg -si
+    cd ~/aur && git clone https://aur.archlinux.org/nvm.git && cd nvm &&
+    makepkg -si
+    ```
+
+1. [On mac] Install the powerline fonts for ZSH
+
 1. Set up the dotfiles
 
     ```

@@ -2,7 +2,7 @@ export PATH=$PATH:/usr/local/bin
 platform=$(uname)
 
 #
-# For the host machine
+# For work machine
 if [ -e /Users/conor.branagan/go ]; then
     VM=/Users/conor.branagan/go/src/github.com/DataDog
     DATADOG_ROOT=$VM
@@ -42,37 +42,14 @@ if [ -e /Users/conor.branagan/go ]; then
 
     # aws
     export PATH=$HOME/Library/Python/3.6/bin:$PATH
+    
+    export DATADOG_ROOT="$VM"
+    export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
+    export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 fi
-
-#
-# For the personal-chef vm
-
-if [ -e ~/dogweb ]
-then
-    VM=~
-    DATADOG_ROOT=$VM
-
-    # go env
-    export GOPATH=~/go
-    export GOROOT=/usr/local/go
-    export GOBIN=$GOPATH/bin
-    export DDGO=$GOPATH/src/github.com/DataDog/dd-go
-
-    # python
-    export DOGWEB_DEFAULT_CONFIG_PATH=$VM/dogweb/development.ini
-    source ~/python/bin/activate
-
-    # path
-    export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOROOT/bin:$GOBIN
-    alias supe='sudo supervisorctl'
-fi
-
-export DATADOG_ROOT="$VM"
-export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
-export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
 
 # Rust
 export PATH="$PATH:$HOME/.cargo/bin"
 # Set go environment
-eval $(gimme 1.17.7) 2> /dev/null
+eval $(gimme 1.19.2) 2> /dev/null
