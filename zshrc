@@ -1,10 +1,4 @@
-if [ -e ~/dd ]; then
-    # Host machine
-    CONFIG_ROOT="$HOME"
-else
-    # DD devenv
-    CONFIG_ROOT="$HOME/.user-config"
-fi
+CONFIG_ROOT="$HOME"
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$CONFIG_ROOT/.oh-my-zsh
