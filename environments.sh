@@ -53,3 +53,5 @@ fi
 export PATH="$PATH:$HOME/.cargo/bin"
 # Set go environment
 eval $(gimme 1.19.2) 2> /dev/null
+# Set node environment
+eval "$(nodenv init -)"

@@ -15,5 +15,6 @@
 --type-set=conf=.conf
 --type-set=go=.go
 --type-set=jsx=.jsx
+--type-set=tsx=.tsx
 
 --ignore-dir=build
