@@ -12,7 +12,7 @@ dotfiles
     On Mac:
 
     ```
-    brew install rbenv nvm gimme
+    brew install rbenv nodenv gimme
     ```
     
     On Arch:

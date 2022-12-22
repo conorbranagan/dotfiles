@@ -28,13 +28,7 @@ if [ -e /Users/conor.branagan/go ]; then
     fi
 
     # node
-    export NVM_DIR=~/.nvm
-    if [[ "$platform" == "Darwin" ]]; then
-        source `brew --prefix nvm`/nvm.sh
-    else
-        source $NVM_DIR/nvm.sh
-    fi
-    [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+   [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
     # ruby
     export PATH=$HOME/.rbenv/bin:$PATH
