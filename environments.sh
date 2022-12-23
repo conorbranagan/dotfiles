@@ -13,11 +13,6 @@ if [ -e /Users/conor.branagan/go ]; then
 
     # go env
     export GOPATH=/Users/conor.branagan/go
-    #if [[ "$platform" == "Darwin" ]]; then
-    #    export GOROOT=/usr/local/opt/go/libexec
-    #else
-    #    export GOROOT=/usr/local/go
-    #fi
     export GOBIN=$GOPATH/bin
     export DDGO=~/dd/dd-go
 
