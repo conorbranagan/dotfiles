@@ -35,6 +35,9 @@ if [ -e /Users/conor.branagan/go ]; then
     export DATADOG_ROOT="$VM"
     export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
     export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
+
+    # nodenv
+    eval "$(nodenv init -)"
 fi
 
 
@@ -42,5 +45,3 @@ fi
 export PATH="$PATH:$HOME/.cargo/bin"
 # Set go environment
 eval $(gimme 1.19.2) 2> /dev/null
-# Set node environment
-eval "$(nodenv init -)"
