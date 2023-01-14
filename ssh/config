@@ -10,7 +10,7 @@ Host *
   HostKeyAlgorithms -ssh-rsa
 
 Host freenas
-  HostName 192.168.1.160
+  HostName 192.168.1.208
   User conor
   Port 22
   UserKnownHostsFile /dev/null
