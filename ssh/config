@@ -7,9 +7,8 @@ Host *
   ControlPersist 10m
   # send a keep-alive after 30s of inactivity
   ServerAliveInterval 30
-  HostKeyAlgorithms -ssh-rsa
 
-Host freenas
+Host freenas-local
   HostName 192.168.1.208
   User conor
   Port 22
@@ -19,4 +18,14 @@ Host freenas
   IdentitiesOnly yes
   LogLevel FATAL
   ForwardAgent yes
-  HostKeyAlgorithms -ssh-rsa
+
+Host freenas
+  HostName 100.85.23.25
+  User conor
+  Port 22
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentitiesOnly yes
+  LogLevel FATAL
+  ForwardAgent yes
