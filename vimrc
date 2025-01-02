@@ -2,25 +2,8 @@
 " Plugins
 "============
 
-" Set up vundle
-set nocompatible
-filetype off
+" TODO: Bring back Vundle or something newer if we find we need them.
 
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" install the plugins
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'fatih/vim-go'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-markdown'
-
-call vundle#end()            " required
-filetype plugin indent on    " required
 
 "=============
 " Behaviour

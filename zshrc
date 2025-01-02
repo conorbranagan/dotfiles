@@ -30,7 +30,6 @@ if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline
 fi
 
 # Customize to your needs...
-. $CONFIG_ROOT/.exports.sh
 . $CONFIG_ROOT/.aliases.sh
 . $CONFIG_ROOT/.functions.sh
 . $CONFIG_ROOT/.environments.sh

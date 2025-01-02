@@ -16,5 +16,7 @@
 --type-set=go=.go
 --type-set=jsx=.jsx
 --type-set=tsx=.tsx
+--type-set=rs=.rs
+--type-set=rust=.rs
 
 --ignore-dir=build

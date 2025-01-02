@@ -65,7 +65,3 @@ name () {
 sumlines () {
     awk '{s+=$1} END {print s}'
 }
-
-function ddr-team-release() {
-    ~/dd/dd-go/scripts/ddr-team-release $1 evmgt
-}

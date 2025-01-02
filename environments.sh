@@ -1,47 +1,47 @@
 export PATH=$PATH:/usr/local/bin
 platform=$(uname)
 
-#
-# For work machine
-if [ -e /Users/conor.branagan/go ]; then
-    VM=/Users/conor.branagan/go/src/github.com/DataDog
-    DATADOG_ROOT=$VM
+# Environment variables.
+export EDITOR=vim
+export PATH="/usr/local/bin:$PATH"
+export HISTFILE=~/.histfile
+export HISTSIZE=1000
+export SAVEHIST=1000
+export VIRTUAL_ENV_DISABLE_PROMPT=true
 
-    # newer bash
+# TODO
+#[[ -s "$HOME/.tmuxinator/scripts/tmuxinator" ]] && source "$HOME/.tmuxinator/scripts/tmuxinator"
+
+# Mac-specific things
+if [[ "$platform" == "Darwin" ]]; then
+    # FIXME: Check where these came from
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-    export PATH="/usr/local/bin:$PATH"
-
-    # go env
-    export GOPATH=/Users/conor.branagan/go
-    export GOBIN=$GOPATH/bin
-    export DDGO=~/dd/dd-go
-
-    # path
-    export PATH=$PATH:$VM/dogweb/node_modules/.bin/:$GOROOT/bin:$GOBIN
-    if [[ "$platform" == "Darwin" ]]; then
-        export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-    fi
-
-    # node
-   [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-
-    # ruby
-    export PATH=$HOME/.rbenv/bin:$PATH
-    eval "`rbenv init - zsh`"
-
-    # aws
-    export PATH=$HOME/Library/Python/3.6/bin:$PATH
-    
-    export DATADOG_ROOT="$VM"
-    export PATH="$PATH:$DATADOG_ROOT/devtools/bin"
     export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
+    
+    # Homebrew thing?
+    export 
 
-    # nodenv
-    eval "$(nodenv init -)"
+    # Go env variables
+    export GOPATH=/Users/conor.branagan/go
+    
+    # Do we need this?
+    export GOBIN=$GOPATH/bin
 fi
 
+# Linux-specific Things
+if [[ "$platform" == "Linux" ]]; then
+
+fi
+
+# Go
+eval $(gimme 1.23.4) 2> /dev/null
 
 # Rust
-export PATH="$PATH:$HOME/.cargo/bin"
-# Set go environment
-eval $(gimme 1.19.2) 2> /dev/null
+. "$HOME/.cargo/env" 
+
+# Ruby
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "`rbenv init - zsh`"
+
+# Node
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
