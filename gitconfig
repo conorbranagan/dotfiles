@@ -28,3 +28,6 @@
 
 [push]
     default = nothing
+
+[init]
+    defaultBranch = main
