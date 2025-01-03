@@ -17,9 +17,6 @@ if [[ "$platform" == "Darwin" ]]; then
     # FIXME: Check where these came from
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
     export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
-    
-    # Homebrew thing?
-    export 
 
     # Go env variables
     export GOPATH=/Users/conor.branagan/go

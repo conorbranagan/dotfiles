@@ -3,7 +3,6 @@ general {
     interval = 5
 }
 
-order += "ipv6"
 order += "ethernet eno1"
 order += "path_exists Tailscale"
 order += "disk /"
