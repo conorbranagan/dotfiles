@@ -8,7 +8,12 @@ order += "path_exists Tailscale"
 order += "disk /"
 order += "memory"
 order += "load"
-order += "tztime local"
+order += "time"
+
+time {
+    format = "%Y-%m-%d %H:%M"
+}
+
 
 ethernet eno1 {
     format_up = "E: %ip (%speed)"
@@ -22,10 +27,6 @@ run_watch DHCP {
 path_exists Tailscale {
         # path exists when a VPN tunnel launched by tailscale is active
         path = "/proc/sys/net/ipv4/conf/tailscale0"
-}
-
-tztime local {
-        format = "%H:%M"
 }
 
 load {
