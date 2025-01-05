@@ -7,3 +7,8 @@ Host *
   ControlPersist 10m
   # send a keep-alive after 30s of inactivity
   ServerAliveInterval 30
+
+Host truenas
+    HostName 192.168.1.208
+    User conor
+    IdentityFile ~/.ssh/id_rsa # Or the path to your private key
