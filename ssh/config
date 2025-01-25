@@ -8,8 +8,8 @@ Host *
   # send a keep-alive after 30s of inactivity
   ServerAliveInterval 30
 
-Host freenas-local
-  HostName 192.168.1.208
+Host truenas-local
+  HostName 192.168.1.238
   User conor
   Port 22
   UserKnownHostsFile /dev/null
@@ -19,8 +19,8 @@ Host freenas-local
   LogLevel FATAL
   ForwardAgent yes
 
-Host freenas
-  HostName 100.85.23.25
+Host truenas
+  HostName 100.81.237.109
   User conor
   Port 22
   UserKnownHostsFile /dev/null
