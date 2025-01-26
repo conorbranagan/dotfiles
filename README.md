@@ -15,13 +15,17 @@ Right now it supports basic Mac and ArchLinux setup.
 
 2. [Install Oh-My-ZSH](https://github.com/robbyrussell/oh-my-zsh)
 
-3. Install packages
+3. [Install iTerm](https://iterm2.com/)
+
+4. Install [Powerline Fonts](https://github.com/powerline/fonts)
+
+5. Install packages
 
     ```
     brew install rbenv nodenv gimme ack
     ```
 
-4. Install Rust
+6. Install Rust
 
     ```
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -44,8 +48,13 @@ Right now it supports basic Mac and ArchLinux setup.
 
 ## Installation
 
+In iTerm:
+
 ```
 git clone https://github.com/conorbranagan/dotfiles
 cd dotfiles
 ./deploy.sh
+cp ./com.googlecode.iterm2.plist ~/Library/Preferences
 ```
+
+Then restart iTerm
