@@ -9,6 +9,11 @@ Host *
   ServerAliveInterval 30
 
 Host truenas
-    HostName 192.168.1.208
-    User conor
-    IdentityFile ~/.ssh/id_rsa # Or the path to your private key
+    HostName 100.81.237.109
+    User truenas_admin
+    IdentityFile ~/.ssh/id_ed25519
+
+Host truenas-local
+    HostName 192.168.1.238
+    User truenas_admin
+    IdentityFile ~/.ssh/id_ed25519
