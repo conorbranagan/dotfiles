@@ -8,6 +8,10 @@ for CONFIG_ROOT in $CONFIG_LOCATIONS
 do
     mkdir -p $CONFIG_ROOT
     echo "Deploying config files to $CONFIG_ROOT"
+
+    # Ensure we have locations for vim swap and backup.
+    mkdir -p $HOME/.vim/backup $HOME/.vim/tmp
+
     # Deploy each app config file.
     for f in `ls . `
     do
