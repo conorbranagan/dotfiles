@@ -22,7 +22,7 @@ Right now it supports basic Mac and ArchLinux setup.
 5. Install packages
 
     ```
-    brew install rbenv nodenv gimme ack
+    brew install rbenv nodenv ack
     ```
 
 6. Install Rust
@@ -37,7 +37,7 @@ Right now it supports basic Mac and ArchLinux setup.
 1. Install packages used by dotfiles
 
     ```
-    yay -S rbenv nodenv gimme ack --noconfirm
+    yay -S rbenv nodenv ack --noconfirm
     ```
 
 2. Install Rust

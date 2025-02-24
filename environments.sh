@@ -14,12 +14,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 # Mac-specific things
 if [[ "$platform" == "Darwin" ]]; then
-    # FIXME: Check where these came from
-    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-    export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
-
     # Go env variables
-    export GOPATH=/Users/conor.branagan/go
+    export GOPATH=/Users/conorbranagan/dev
+    export PATH="$HOME/.local/bin:$PATH"
     
     # Do we need this?
     export GOBIN=$GOPATH/bin
@@ -29,9 +26,6 @@ fi
 if [[ "$platform" == "Linux" ]]; then
 
 fi
-
-# Go
-eval $(gimme 1.23.4) 2> /dev/null
 
 # Rust
 . "$HOME/.cargo/env" 
