@@ -1,3 +1,3 @@
 alias du="du -h"
 alias df="df -h"
-alias k="kubectl"
+alias k="aws-vault exec conor -- kubectl"
