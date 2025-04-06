@@ -65,3 +65,18 @@ name () {
 sumlines () {
     awk '{s+=$1} END {print s}'
 }
+
+# Add this to your .bashrc, .zshrc, or appropriate shell config file
+function k() {
+  # Get current kubectl context
+  CURRENT_CONTEXT=$(kubectl config current-context 2>/dev/null)
+
+  # If we're in the EKS context, use aws-vault
+  if [[ "$CURRENT_CONTEXT" == *"eks"* ]]; then
+    # Replace 'your-profile' with your actual aws-vault profile name
+    aws-vault exec conor -- kubectl "$@"
+  else
+    # For all other contexts, just use kubectl directly
+    kubectl "$@"
+  fi
+}
