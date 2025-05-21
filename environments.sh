@@ -36,3 +36,10 @@ eval "`rbenv init - zsh`"
 
 # Node
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
+# Postgres
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# Windsurf
+export PATH="/Users/conorbranagan/.codeium/windsurf/bin:$PATH"
+export PATH="/opt/homebrew/opt/util-linux/bin:$PATH"
