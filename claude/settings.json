@@ -133,23 +133,23 @@
         "hooks": [
           {
             "type": "command",
-            "command": "(jq -r '.tool_input.file_path' | grep -E '\\.(ts|tsx)$' | xargs -r pnpm tsc --noEmit) 1>&2 || exit 2"
+            "command": "jq -r '.tool_input.file_path' | grep -E '\\.(ts|tsx)$' | xargs -r pnpm tsc --noEmit || exit 2"
           },
           {
             "type": "command",
-            "command": "(jq -r '.tool_input.file_path' | grep -E '\\.(js|jsx|ts|tsx)$' | xargs -r pnpm prettier --write) 1>&2 || exit 2"
+            "command": "jq -r '.tool_input.file_path' | grep -E '\\.(js|jsx|ts|tsx)$' | xargs -r pnpm prettier --write || exit 2"
           },
           {
             "type": "command",
-            "command": "(jq -r '.tool_input.file_path' | grep -E '\\.(py)$' | xargs -r uv run black --check) 1>&2 || exit 2"
+            "command": "jq -r '.tool_input.file_path' | grep -E '\\.(py)$' | xargs -r uv run black --check || exit 2"
           },
           {
             "type": "command",
-            "command": "(jq -r '.tool_input.file_path' | grep -E '\\.(py)$' | xargs -r uv run ruff check --fix) 1>&2 || exit 2"
+            "command": "jq -r '.tool_input.file_path' | grep -E '\\.(py)$' | xargs -r uv run ruff check --fix || exit 2"
           },
           {
             "type": "command",
-            "command": "(jq -r '\"\\(.tool_name) - \\(.tool_input.file_path)\"' >> ~/.claude/tool-use-log.txt) 1>&2 || exit 2"
+            "command": "jq -r '\"\\(.tool_name) - \\(.tool_input.file_path)\"' >> ~/.claude/tool-use-log.txt || exit 2"
           }
         ]
       }
