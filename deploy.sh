@@ -37,6 +37,9 @@ do
 
     # Ensure we have locations for vim swap and backup.
     mkdir -p $HOME/.vim/backup $HOME/.vim/tmp
+    
+    # Ensure Claude directory exists
+    mkdir -p $HOME/.claude
 
     # Deploy each app config file.
     for f in `ls . `
