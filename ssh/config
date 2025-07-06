@@ -1,0 +1,24 @@
+Host *
+  # IPv4 only for speed
+  AddressFamily inet
+  Compression yes
+  ControlMaster auto
+  ControlPath /tmp/ssh_mux_%h_%p_%r
+  ControlPersist 10m
+  # send a keep-alive after 30s of inactivity
+  ServerAliveInterval 30
+
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+    AddKeysToAgent yes
+    UseKeychain yes
+
+# Add your own host configurations below or in a separate file
+# Example:
+# Host myserver
+#     HostName example.com
+#     User myuser
+#     IdentityFile ~/.ssh/id_ed25519

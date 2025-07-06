@@ -1,0 +1,43 @@
+[user]
+    name = __GIT_USER_NAME__
+    email = __GIT_USER_EMAIL__
+    signingkey = ~/.ssh/id_ed25519.pub
+
+[alias]
+    st = status -s
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    stashes = stash list
+    unstage = reset HEAD
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    tree = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+    f = "!git ls-files | grep -i"
+
+[core]
+    whitespace = trailing-space,space-before-tab,cr-at-eol
+
+[color]
+    ui = true
+    diff = true
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[push]
+    default = nothing
+
+[init]
+    defaultBranch = main
+
+[commit]
+    gpgsign = true
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/allowed_signers

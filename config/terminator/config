@@ -1,0 +1,23 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+[keybindings]
+  close_window = <Primary><Shift>q
+  split_horiz = <Alt>h
+  close_term = <Primary>w
+  split_vert = <Alt>v
+  new_tab = <Primary>t
+  copy = <Primary>c
+  paste = <Primary>v
+[profiles]
+  [[default]]
+    background_image = None
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]

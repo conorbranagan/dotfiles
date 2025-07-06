@@ -1,0 +1,14 @@
+*.class
+*.pyc
+*.swo
+*.swp
+.svn
+.swo
+*#*
+#
+.#*
+.DS_Store
+.rvmrc
+*.o
+*.a
+.env.local

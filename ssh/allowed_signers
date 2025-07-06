@@ -1,0 +1,2 @@
+# This file will be populated by the deploy script with your SSH public key
+# Format: email@example.com ssh-ed25519 YOUR_PUBLIC_KEY_HERE
