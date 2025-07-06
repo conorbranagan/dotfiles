@@ -30,6 +30,17 @@ prompt_if_empty() {
 prompt_if_empty "GIT_USER_NAME" "Enter your Git user name"
 prompt_if_empty "GIT_USER_EMAIL" "Enter your Git email"
 
+# Save the values to .env.local if they were prompted
+if [ ! -f "$ENV_FILE" ] || ! grep -q "GIT_USER_NAME" "$ENV_FILE" 2>/dev/null; then
+    echo "Saving configuration to .env.local..."
+    cat > "$ENV_FILE" <<EOF
+# Personal configuration - DO NOT COMMIT
+GIT_USER_NAME="$GIT_USER_NAME"
+GIT_USER_EMAIL="$GIT_USER_EMAIL"
+EOF
+    echo "Configuration saved to $ENV_FILE"
+fi
+
 for CONFIG_ROOT in $CONFIG_LOCATIONS
 do
     mkdir -p $CONFIG_ROOT
