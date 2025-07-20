@@ -22,3 +22,11 @@ Host github.com
 #     HostName example.com
 #     User myuser
 #     IdentityFile ~/.ssh/id_ed25519
+
+Host truenas
+    HostName 100.81.237.109
+    User truenas_admin
+
+Host truenas-local
+    HostName 192.168.1.238
+    User truenas_admin
