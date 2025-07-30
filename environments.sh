@@ -43,3 +43,10 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # Windsurf
 export PATH="$HOME/.codeium/windsurf/bin:$PATH"
 export PATH="/opt/homebrew/opt/util-linux/bin:$PATH"
+
+# Pnpm
+export PNPM_HOME="/Users/conorbranagan/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
